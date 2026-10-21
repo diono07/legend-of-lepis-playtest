@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <title>樂比斯傳說｜戰鬥原型 v0.7</title>
-    <script type="module" crossorigin src="./assets/index-BnpMD8tG.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CoWFfO8b.css">
+    <script type="module" crossorigin src="./assets/index-CCfk6M8-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-yjEMTD-y.css">
   </head>
   <body>
     <canvas id="game" aria-label="樂比斯傳說戰鬥場景"> </canvas>
@@ -15,8 +15,8 @@
       <div class="state-line">
         <span id="actorState"> </span> · <span id="companionState"> </span>
       </div>
-      <div>移動 WASD／方向鍵 · 攻擊 J · 技能 K · 閃避 Space</div>
-      <div>切換模式：右上按鈕 · 重生 R · 暫停 P</div>
+      <div>滑鼠點地移動 · Q 風暴／W 烈焰／E 穿刺</div>
+      <div>空白鍵閃避 · 重生 T · 暫停 P</div>
     </div>
     <div id="controls">
       <button data-mode="manual" class="active">手動</button>
@@ -36,16 +36,18 @@
         <span> </span>
       </div>
       <div class="actions">
-        <button data-key="Space">閃避</button>
-        <button data-key="KeyJ">攻擊</button>
-        <button data-key="KeyK">技能</button>
+        <button data-key="KeyQ" aria-label="風暴環 Q"><kbd>Q</kbd>風暴</button>
+        <button data-key="KeyW" aria-label="烈焰印記 W"><kbd>W</kbd>烈焰</button>
+        <button data-key="KeyE" aria-label="穿刺劍氣 E"><kbd>E</kbd>穿刺</button>
+        <button data-key="Space" aria-label="空白鍵閃避"><kbd>Space</kbd>閃避</button>
       </div>
     </div>
     <div id="status">
-      v0.7 · 八方向動畫 × 技能同步 × 樂比斯協同 · <a href="./legacy/v0.6.html">遊玩 v0.6</a>
+      v0.7 · 點地移動 × 技能操作 × 樂比斯協同 · <a href="./legacy/v0.6.html">遊玩 v0.6</a> ·
+      <a href="./legacy/v0.7-original-controls.html">舊版操作</a>
     </div>
     <div id="runes">
-      <strong>技能質變符文（按 1／2／3）</strong>
+      <strong>符文：1／2／3 選擇 · Q／W／E 施放</strong>
       <button data-rune="storm" class="chosen">1 風暴環</button>
       <button data-rune="flame">2 烈焰印記</button>
       <button data-rune="pierce">3 穿刺劍氣</button>
@@ -56,7 +58,7 @@
       藥水：<span id="potionCount">HP × 5 ／ MP × 5</span> <button id="healBtn">HP [H]</button>
       <button id="manaBtn">MP [M]</button>
       <button id="pauseBtn" aria-pressed="false">暫停 [P]</button>
-      <button id="resetBtn">重生 [R]</button>
+      <button id="resetBtn">重生 [T]</button>
     </div>
     <div id="notices"></div>
   </body>
