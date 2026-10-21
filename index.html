@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>樂比斯傳說｜戰鬥原型 v0.7</title>
+    <script type="module" crossorigin src="./assets/index-BnpMD8tG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CoWFfO8b.css">
+  </head>
+  <body>
+    <canvas id="game" aria-label="樂比斯傳說戰鬥場景"> </canvas>
+    <div id="hud">
+      <b>樂比斯傳說 · 戰鬥原型 v0.7</b>
+      <div id="stats"></div>
+      <div class="state-line">
+        <span id="actorState"> </span> · <span id="companionState"> </span>
+      </div>
+      <div>移動 WASD／方向鍵 · 攻擊 J · 技能 K · 閃避 Space</div>
+      <div>切換模式：右上按鈕 · 重生 R · 暫停 P</div>
+    </div>
+    <div id="controls">
+      <button data-mode="manual" class="active">手動</button>
+      <button data-mode="semi">半自動</button>
+      <button data-mode="auto">全自動</button>
+    </div>
+    <div id="mobile">
+      <div class="pad">
+        <span> </span>
+        <button data-key="ArrowUp">▲</button>
+        <span> </span>
+        <button data-key="ArrowLeft">◀</button>
+        <span> </span>
+        <button data-key="ArrowRight">▶</button>
+        <span> </span>
+        <button data-key="ArrowDown">▼</button>
+        <span> </span>
+      </div>
+      <div class="actions">
+        <button data-key="Space">閃避</button>
+        <button data-key="KeyJ">攻擊</button>
+        <button data-key="KeyK">技能</button>
+      </div>
+    </div>
+    <div id="status">
+      v0.7 · 八方向動畫 × 技能同步 × 樂比斯協同 · <a href="./legacy/v0.6.html">遊玩 v0.6</a>
+    </div>
+    <div id="runes">
+      <strong>技能質變符文（按 1／2／3）</strong>
+      <button data-rune="storm" class="chosen">1 風暴環</button>
+      <button data-rune="flame">2 烈焰印記</button>
+      <button data-rune="pierce">3 穿刺劍氣</button>
+      <div id="runeDesc">近身範圍攻擊，多目標清怪</div>
+      <div style="opacity: 0.8; margin-top: 6px">青色：風暴環｜橘色：烈焰印記｜白藍：穿刺劍氣</div>
+    </div>
+    <div id="pots">
+      藥水：<span id="potionCount">HP × 5 ／ MP × 5</span> <button id="healBtn">HP [H]</button>
+      <button id="manaBtn">MP [M]</button>
+      <button id="pauseBtn" aria-pressed="false">暫停 [P]</button>
+      <button id="resetBtn">重生 [R]</button>
+    </div>
+    <div id="notices"></div>
+  </body>
+</html>
