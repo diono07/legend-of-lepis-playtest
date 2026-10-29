@@ -1,0 +1,8 @@
+{
+  "version": "0.11.1",
+  "sourceCommit": "50c568e",
+  "sourceBranch": "feat/forest-counterplay",
+  "standaloneSha256": "40af6c900aa8963d004f55deea167ffb297fe6462b7ed80115b3bfb21144ced4",
+  "rollback": "legacy/v0.11.0-stable.html",
+  "status": "玩法試作；15～20 分鐘冒險尚未驗收達標"
+}
